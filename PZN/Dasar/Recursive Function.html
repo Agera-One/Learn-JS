@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		// factorial loop
+		function factorial(value) {
+			let result = 1;
+			for (let i = 1; i <= value; i++) {
+				result = result * i;
+			}
+			return result;
+		}
+
+		console.info(factorial(5));
+		// 1 = 1 * 1 = 1
+		// i++ = 2
+		// 1 = 1 * 2 = 2
+		// i++ = 3
+		// 2 = 2 * 3 = 6
+		// i++ = 4
+		// 6 = 6 * 4 = 24
+		// i++ = 5
+		// 24 = 24 * 5 = 120
+
+
+		function factorialRecursive(value) {
+			if (value === 1) {
+				return 1;
+			} else {
+				return value * factorialRecursive(value - 1);
+			}
+		}
+
+		console.info(factorialRecursive(5));
+		// 5 * factorialRecursive(4)
+		// 5 * 4 * factorialRecursive(3)
+		// 5 * 4 * 3 * factorialRecursive(2)
+		// 5 * 4 * 3 * 2 factorialRecursive(1)
+		// 5 * 4 * 3 * 2 * 1
+	</script>
+</body>
+</html>

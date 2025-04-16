@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Struktur Data Object</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		const manager = {
+			name : "Dzaki",
+			company : "Google",
+			age : 36
+		};
+
+		// Mengakses menggunakan dot(.)
+		console.log(manager.name);
+
+		// Mengakses menggunakan square bracket
+		console.log(manager["company"]);
+
+		// Mengubah nilai di properti object
+		manager.age = 30;
+		console.log(manager.age);
+
+		// Menghapus properti di object
+		delete manager["name"];
+		console.log(manager);
+
+	</script>
+</body>
+</html>

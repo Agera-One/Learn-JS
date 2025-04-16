@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>arrow function di object</title>
+</head>
+<body>
+	<script type="text/javascript">
+		const person = {
+			name : "Dzaki",
+			sayHello : (name) => {
+				console.info(this); // mengakses window bukan object person
+				console.info(`Hello ${name}`);
+			}
+		};
+
+		person.sayHello("Dewa");
+
+		// NOTES : ARROW FUNCTION TIDAK BISA DIGUNAKAN UNTUK MENGAKSES 
+		// ARGUMENTS OBJECT
+		// FUNTION GENERATOR
+		// KATA KUNCI THIS
+		// KATA KUNCI SUPER
+	</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Spread Operator Array</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		// used to combine 2 array
+		const arr1 = {
+			name : 'Ezakiel'
+		};
+		const arr2 = {
+			lastName : 'Dr.Disconnect',
+			address : 'Los Angels'
+		};
+		const newArr = {
+			...arr1,
+			...arr2
+		};
+
+		console.log(newArr);
+
+		// used to copied old arrect into a new arrect
+		const originalArr = {
+			name : 'Maverick',
+			age : '27'
+		};
+		const copiedArr = {
+			...originalArr
+		};
+
+		console.log(copiedArr);
+
+	</script>
+</body>
+</html>

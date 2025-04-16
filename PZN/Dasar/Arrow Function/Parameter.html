@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>arrow function</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// tanpa kurung parameter
+		// berlaku jika parameter hanya satu
+		const welcome = name => console.info(`Welcome to my house ${name}`);
+		welcome("Dzaki")
+
+		// sebagai parameter
+		function goodMorning(callback) {
+			callback("Dzaki")
+		}
+		goodMorning((name) => console.info(`Good morning ${name}`));
+	</script>
+</body>
+</html>

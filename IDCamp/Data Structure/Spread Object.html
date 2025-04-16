@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Spread Operator Object</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		// used to combine 2 object
+		const obj1 = {
+			name : 'Ezakiel'
+		};
+		const obj2 = {
+			lastName : 'Dr.Disconnect',
+			address : 'Los Angels'
+		};
+		const newObj = {
+			...obj1,
+			...obj2
+		};
+
+		console.log(newObj);
+
+		// used to copied old object into a new object
+		const originalObj = {
+			name : 'Maverick',
+			age : '27'
+		};
+		const copiedObj = {
+			...originalObj
+		};
+
+		console.log(copiedObj);
+
+	</script>
+</body>
+</html>

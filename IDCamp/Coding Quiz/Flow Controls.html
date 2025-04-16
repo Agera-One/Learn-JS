@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		/*	TODO:
+			* Lengkapilah function ini agar dapat menghasilkan output berupa kategori bilangan berdasarkan input yg diberikan
+			* dengan ketentuan sebagai berikut :
+			* 1. jika input bukan number, bangkitkan (throw) error X
+			* 2. jika input adalah bilangan genap, kembalikan dengan nilai "Genap" X
+			* 3. jika input adalah bilangan ganjil, kembalikan dengan nilai "ganjil" X
+			* 4. jika input adalah bilangan prima, kembalikan dengan nilai "Prima"
+			* 5. jika input adalah nol, kategorikan kembalikan dengan nilai "Nol" X
+			* 6. jika input negatif, kembalikan dengan nilai "Negatif" X
+		*/
+
+		function categorizeNumber(input) {
+			if (typeof input !== 'number') {
+				throw new Error('Input harus berupa bilangan bulat');
+			} else if (input < 0) {
+				return 'Negatif';
+			} else if (input === 0) {
+				return 'Nol'
+			} else if (prima(input)) {
+				return 'Prima';
+			} else if (input % 2 === 0) {
+				return 'Genap';
+			} else if (input % 2 === 1) {
+				return 'Ganjil';
+			}
+		}
+
+		function prima(number) {
+			for (let i = 2; i <= Math.sqrt(number); i++) {
+				if (number % i === 0) {
+					return false;
+				}
+			}
+			return true;
+		}
+
+		try {
+			categorizeNumber('abc');
+		} catch (error) {
+			console.log(error.massage);
+		}
+
+		console.log(categorizeNumber(15));
+		console.log(categorizeNumber(12));
+		console.log(categorizeNumber(17));
+		console.log(categorizeNumber(0));
+		console.log(categorizeNumber(-5));
+		console.log(categorizeNumber('abc'));
+
+	</script>
+</body>
+</html>

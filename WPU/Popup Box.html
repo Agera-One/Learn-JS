@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>pop up box</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		alert('Welcome to my website');
+		alert('My name is');
+		alert('Dr. Disconnect');
+
+		let name = prompt('Input your name :');
+		let age = prompt('How old are you Mr. ' + name);
+		let gender = prompt('Whats your gender?');
+
+		let feedBack = confirm('Are you willing to provide input for this website?');
+		if (feedBack === true) {
+			prompt('Input your feedback here :');
+		}  if else (age <= 25 && gender === 'male') {
+			alert('Have a nice day young boys');
+		} if else (age <= 25 && gender === 'female') {
+			alert('Have a nice day young girls');
+		} if else (age >= 25 && gender === 'male') {
+			alert('Have a nice day man');
+		} if else (age >= 25 && gender === 'female') {
+			alert('Have a nice day women');
+		} else {
+			alert('Have a nice day');
+		}
+
+
+
+	</script>
+</body>
+</html>

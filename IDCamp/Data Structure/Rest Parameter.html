@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Rest Parameter</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		// rest parameter adalah fitur dimana kita dapat mengirim data sebanyak-banyaknya pada satu parameter, dan secara otomatis akan dikonversi menjadi array
+		// rest parameter hanya boleh ada satu di function, tidak boleh lebih dari satu
+		// rest parameter hanya boleh berada di posisi paling akhir, tidak boleh didepan atau ditengah, kecuali memang cuma ada 1 parameter
+		// jika ada parameter lain sebelumnya, value nya tidak menjadi bagian dari array yg dihasilkan rest parameter
+		// di bahasa pemrograman lain, disebut juga variable argument
+
+		// rest parameter 1
+		function myFunc1(...manyMoreArgs1) {
+			console.log('manyMoreArgs1', manyMoreArgs1);
+		}
+		myFunc1('one', 'two', 'three');
+
+		// rest parameter 2
+		function myFunc2(number, ...manyMoreArgs2) {
+			console.log('number', number);
+			console.log('manyMoreArgs2', manyMoreArgs2);
+		}
+		myFunc2('one', 'two', 'three');
+
+		// rest parameter untuk array.length
+		function myFunc3(...manyMoreArgs3) {
+			console.log(manyMoreArgs3.length);
+			console.log('manyMoreArgs3', manyMoreArgs3);
+		}
+		myFunc3('one', 'two', 'three');
+
+		// rest parameter digunakan pada destructuring array untuk menangkap seluruh sisa elemen terakhir dalam bentuk array
+		const favorites = ['fried rice', 'fried noodle', 'grilled chicken', 'tofu', 'tempe'];
+		const [first, second, ...rest] = favorites;
+		console.log(first);
+		console.log(second);
+		console.log(rest);
+
+
+	</script>
+</body>
+</html>

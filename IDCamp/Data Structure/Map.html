@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Struktur Data Map</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		// Membuat map
+		const fruits = new Map([
+			['banana', 500],
+			['apple', 350],
+			['mango', 250]
+		]);
+		console.log(fruits);
+
+		// Mernyimpan nilai mengunakan keyword set
+		const student = new Map();
+		student.set('name', 'rizqi');
+		student.set('city', 'surabaya');
+		student.set('school', 'smamda');
+		student.set('country', 'indonesia');
+		console.log(student);
+
+		// Mengakses nilai mengunakan keyword get
+		const hypercar = new Map();
+		hypercar.set('name', 'koenigsegg');
+		console.log(hypercar.get('name'));
+
+		// Menghapus nilai menggunnakan keyword delete
+		const animal = new Map();
+		animal.set('land', 'tiger');
+		animal.set('sea', 'shark');
+		animal.set('air', 'falcon');
+		animal.delete('land');
+		console.log(animal);
+
+	</script>
+</body>
+</html>

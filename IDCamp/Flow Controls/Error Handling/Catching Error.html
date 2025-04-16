@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		// Try-Catch
+		// ketika error dibangkitkan, kode yg ada di bawahnya tidak akan tereksekusi
+		try {
+			// menangani error
+			console.log('Mengawali program');
+			console.log('Mengakhiri program');
+		} catch (err) {
+			// dibangkitkan ketika terjadi error di dalam blok try
+			console.log('Karena tidak ada error, blok ini akan diabaikan');
+		}
+
+		try {
+			// menangani error
+			console.log('Mengawali program');
+			throw new Error('Error: Program berhenti');
+			console.log('Mengakhiri program');
+		} catch (err) {
+			// dibangkitkan ketika terjadi error di dalam blok try
+			console.log('Karena ada error, blok ini akan dieksekusi');
+		}
+
+		// Finally
+		// dengan menggunakan finally, ia tidak peduli apakah blok try memiliki error atau tidak
+		try {
+			console.log('ini try block');
+		} catch (err) {
+			console.log('ini catch block');
+		} finally {
+			console.log('ini finally block');
+		}
+
+		try {
+			console.log('ini try block');
+			throw new Error('Error: Program berhenti');
+		} catch (err) {
+			console.log('ini catch block');
+		} finally {
+			console.log('ini finally block');
+		}
+
+	</script>
+</body>
+</html>

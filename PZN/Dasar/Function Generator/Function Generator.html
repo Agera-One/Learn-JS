@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>function generator</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		// sederhana
+		// membuat function generator
+		function* createName() {
+			// return data di setiap iterasi
+			yield "Dzaki";
+			yield "Prasetyo";
+			yield "Iswandanu";
+		}
+
+		const names = createName();
+		for (const name of names) {
+			console.info(name);
+		}
+
+		// kompleks
+		function* makeOdd(value) {
+			for (let i = 1; i <= value; i++) {
+				if (i % 2 === 1) {
+					yield i;
+				}
+			}
+		}
+
+		const numbers = makeOdd(100);
+		for (const number of numbers) {
+			console.info(number);
+		}
+	</script>
+</body>
+</html>

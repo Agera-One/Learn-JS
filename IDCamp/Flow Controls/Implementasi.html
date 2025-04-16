@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		function checkGrades(grades) {
+			for (let i = 0; i < grades.length; i++) {
+				if (typeof grades[i] !== 'number') {
+					throw new Error('Invalid input. Please provide an array of numbers');
+				}
+
+				const grades = grades[i];
+				let predicate;
+
+				if (grades >= 90) {
+					predicate = 'A';
+				} else if (grades >= 80) {
+					predicate = 'B';
+				} else if (grades >= 70) {
+					predicate = 'C';
+				} else if (grades >= 60) {
+					predicate = 'D';
+				} else {
+					predicate = 'E';
+				}
+
+				/*switch (grades) {
+					case grades >= 90:
+						predicate = 'A';
+						break;
+					case grades >= 80:
+						predicate = 'B';
+						break;
+					case grades >= 70:
+						predicate = 'C';
+						break;
+					case grades >= 60:
+						predicate = 'd';
+						break;
+					default:
+						predicate = 'E'
+						break;
+				}*/
+				console.log(`Grades ${i + 1}: ${grades} (${predicate})`)
+
+			}
+		}
+
+		try {
+			const studentGrades = [95, 85, 65, 80,70];
+			checkGrades(studentGrades);
+		} catch (e) {
+			console.error(e);
+		}
+
+	</script>
+</body>
+</html>

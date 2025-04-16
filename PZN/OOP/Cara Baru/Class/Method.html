@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>method</title>
+</head>
+<body>
+	<script type="text/javascript">
+		class Person {
+			// menambahkan constructor
+			constructor(name) {
+				// menambahkan property
+				this.name = name;
+				// menambahkan method kedalam instance object
+				this.sayHello = function(name) {
+					console.info(`hello ${name}, my name is ${this.name}`);
+				}
+			}
+			// menambahkan method kedalam property / _proto_
+			sayHello(name) {
+				console.info(`hello ${name}, my name is ${this.name}`);
+			}
+		}
+
+		const dzaki = new Person("Dzaki");
+		console.info(dzaki);
+		console.info(dzaki.name);
+		dzaki.sayHello("Budiono")
+	</script>
+</body>
+</html>

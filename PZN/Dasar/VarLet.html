@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>problem variable var</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		// jika menggunakan let
+		// deklarasi baru pada local scope
+		// tidak akan merubah variable
+		// yg sudah di deklarasikan
+		// pada global scope
+		// meskipun variable keduanya sama
+
+		// global scope
+		let x = 20;
+		for (let x = 0; x < 10; x++) {
+			// local scope
+			console.log(`Local : ${x}`);
+		}
+		console.log(`Global : ${x}`);
+
+		// jika menggunakan var
+		// deklarasi baru pada local scope
+		// akan merubah variable
+		// yg sudah di deklarasikan
+		// pada global scope
+		// karena variable yg ada di dalam
+		// global scope dan local scope sama
+
+		// global scope
+		var y = 20;
+		for (var y = 0; y < 10; y++) {
+			// local scope
+			console.log(`Local : ${y}`);
+		}
+		console.log(`Global : ${y}`);
+
+	</script>
+</body>
+</html>

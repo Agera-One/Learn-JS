@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>inheritance</title>
+</head>
+<body>
+	<script type="text/javascript">
+		class Employee {
+			sayHello(name) {
+				console.info(`hello ${name}, my name is employee ${this.firstName}`);
+			}
+		}
+
+		// mewariskan prototype employee
+		class Manager extends Employee {
+			sayHello(name) {
+				console.info(`hello ${name}, my name is manager ${this.firstName}`);
+			}
+		}
+
+		const dzaki = new Employee()
+		dzaki.firstName = "Dzaki";
+		dzaki.sayHello("Joko");
+
+		const budiono = new Manager()
+		budiono.firstName = "Budiono";
+		budiono.sayHello("Joko");
+
+		console.info(dzaki);
+		console.info(budiono);
+	</script>
+</body>
+</html>

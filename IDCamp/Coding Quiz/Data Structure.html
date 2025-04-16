@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		/* TODO:
+			* lengkapi function ini agar dapat menambahkan objek employee baru berdasarkan nilai argumen function
+			* simpan ke dalam array 'employees'
+		*/
+
+		const employees = [
+			{
+				name: 'Fulan',
+				email: 'fulan@dicoding.com',
+				joinYear: 2020,
+			},
+		];
+
+		function addEmployee(name, email,joinYear) {
+			const newEmpployee = {name, email, joinYear};
+			employees.push(newEmpployee);
+		}
+		
+		console.log(employees);
+		
+	</script>
+</body>
+</html>

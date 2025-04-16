@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Function Parameter</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		// digunakan ketika ingin mengambil nested data dalam array atau object dalam function
+
+		// OBJECT
+		// cara jadul
+		function displayPerson(people) {
+			console.info(people.firstName);
+			console.info(people.middleName);
+			console.info(people.lastName);
+		}
+		const people = {
+			firstName : "Muhammad",
+			middleName : "Rizqi",
+			lastName : "Kurniahadi"
+		}
+
+		displayPerson(people)
+
+		// destructuring
+		function displayPerson({firstName, middleName, lastName}) {
+			console.info(firstName);
+			console.info(middleName);
+			console.info(lastName);
+		}
+		const person = {
+			firstName : "Dzaki",
+			middleName : "Prasetyo",
+			lastName : "Iswandanu"
+		}
+
+		displayPerson(person)
+
+		// ARRAY
+		// cara jadul
+		function arr(array) {
+			return array[0] + array[1];
+		}
+		
+		console.info(arr([10, 10]));
+
+		// destructuring
+		function sum([first, second]) {
+			return first + second;
+		}
+
+		console.info(sum([20, 20]));
+
+	</script>
+</body>
+</html>

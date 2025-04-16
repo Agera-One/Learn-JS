@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Menghapus Element dan Data Array</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		// DELETE
+		const number = [1, 2, 3, 4, 5];
+		delete number[2];
+		console.log(number);
+
+		// SPLICE
+		// 1 parameter
+		// array.splice(1) jika 1 parameter, maka akan memunculkan jumlah element/array sesuai dengan angka yg ada di dalam parameter
+		const number1 = [1, 2, 3, 4, 5];
+		number1.splice(1);
+		console.log(number1);
+
+		const number2 = [1, 2, 3, 4, 5];
+		number2.splice(2);
+		console.log(number2);
+
+		const number3 = [1, 2, 3, 4, 5];
+		number3.splice(3);
+		console.log(number3);
+
+		const number4 = [1, 2, 3, 4, 5];
+		number4.splice(4);
+		console.log(number4);
+
+		const number5 = [1, 2, 3, 4, 5];
+		number5.splice(5);
+		console.log(number5);
+
+		// 2 parameter
+		// array.splice(1, 1) jika 2 parameter, parameter ke-1 adalah index element/array yg ingin dihapus, parameter ke-2 adalah jumlah element/array yg ingin dihapus
+		const number6 = [1, 2, 3, 4, 5];
+		number6.splice(0, 5)
+		console.log(number6);
+
+		const number7 = [1, 2, 3, 4, 5];
+		number7.splice(1,4)
+		console.log(number7);
+
+		const number8 = [1, 2, 3, 4, 5];
+		number8.splice(2, 3)
+		console.log(number8);
+
+		const number9 = [1, 2, 3, 4, 5];
+		number9.splice(3, 2)
+		console.log(number9);
+
+		const number10 = [1, 2, 3, 4, 5];
+		number10.splice(4, 1)
+		console.log(number10);
+
+		// SHIFT
+		// menghapus element paling awal
+		const odd = [1, 3, 5, 7, 9];
+		odd.shift();
+		console.log(odd)
+
+		// POP
+		// menghapus element paling akhir
+		const even = [2, 4, 6, 8, 10];
+		even.pop();
+		console.log(even);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>property</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/*
+		const dzaki = { // object
+			firstName: "Dzaki", // property
+			lastName: "Iswandananu" // property
+		};
+
+		const budiono = { // object
+			firstName: "Budiono", // property
+			lastName: "Siregar" // property
+		};
+		*/
+
+		// constructor function
+		function FullName() {
+			// "this" digunakan untuk menambahkan property kedalam semua object dari constructor function
+			this.firstName = "";
+			this.lastName = "";
+		};
+
+		// "new" digunakan untuk membuat object dari constructor function
+		const dzaki = new FullName();
+		dzaki.firstName = "Dzaki"; // property
+		dzaki.lastName = "Iswandananu"; // property
+
+		// "new" digunakan untuk membuat object dari constructor function
+		const danil = new FullName();
+		danil.firstName = "Danil"; // property
+		danil.lastName = "Khasyafani"; // property
+
+		console.log(dzaki);
+		console.log(danil);
+	</script>
+</body>
+</html>

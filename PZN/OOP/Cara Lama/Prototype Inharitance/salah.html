@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>prototype inheritance</title>
+</head>
+<body>
+  <script type="text/javascript">
+    function Manager(name) {
+      this.name = name;
+    }
+    function Employee(name) {
+      this.name = name;
+    }
+
+    // mereplace manager prototype menjadi employee prototype, sehingga prototype di manager akan sama persis dengan employee
+    Manager.prototype = Employee.prototype;
+
+    // menambahkan property kedalam semua prototype / _proto_ bukan kedalam intance object
+    Manager.prototype.sayHello = function(name) {
+      console.info(`Hello ${name}, My name is Manager ${this.name}`);
+    }
+
+    // property manager yang sudah ditambahkan kedalam semua prototype akan di replace oleh property employee
+    Employee.prototype.sayHello = function(name) {
+      console.info(`Hello ${name}, My name is Employee ${this.name}`);
+    }
+
+    const manager = new Manager("dzaki");
+    manager.sayHello("budiono");
+    const employee = new Employee("siregar");
+    employee.sayHello("budiono");
+
+    console.info(employee);
+    console.info(manager);
+
+  </script>
+</body>
+</html>

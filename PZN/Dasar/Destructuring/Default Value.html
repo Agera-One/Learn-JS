@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>default value</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		// jika ingin melakukan destructuring di array, namun data nya tidak ada
+		// begitu juga pada objek, jika property nya tidak ada
+		// maka kita bisa menambahkan default value
+		// default value berlaku jika data/property selanjutnya pada array/object tidak ada
+
+		// ARRAY
+		const names = ["Dzaki", "Prasetyo"];
+		const [firstName, middleName, lastName = "Iswandanu"] = names;
+
+		console.info(firstName);
+		console.info(middleName);
+		console.info(lastName);
+
+		// OBJECT
+		const person = {
+			middleName: "Rizqi",
+			lastName: "Dewa"
+		}
+
+		const {firstName = "Niko", middleName, lastName} = person;
+		console.info(firstName);
+		console.info(middleName);
+		console.info(lastName);
+
+	</script>
+</body>
+</html>

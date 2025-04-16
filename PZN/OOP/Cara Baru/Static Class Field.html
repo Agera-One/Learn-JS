@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>static class field</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		// static digunakan jika inginmembuat utility field atau function
+		// cara mengaksesnya pun tidak lagi lewatobject, melainnkan lewat class nya
+		// bersifat global, tidak peduli diakses dimana atau siapa yg mengakses, hasilnya sama
+		// biasanya digunakan untuk menyimpan sesuatu secara global
+
+		class HyperCar {
+			static koenigsegg = "Regera";
+			static pagani = "Zonda";
+			static bugatti = "Chiron";
+		}
+
+		const DreamCar = new HyperCar();
+		console.info(DreamCar);
+
+		HyperCar.koenigsegg = "Regera, Jesko";
+		HyperCar.pagani = "Zonda, Huayra";
+		HyperCar.bugatti = "Chiron, Veyron";
+
+		console.info(HyperCar.koenigsegg);
+		console.info(HyperCar.pagani);
+		console.info(HyperCar.bugatti);
+
+	</script>
+</body>
+</html>

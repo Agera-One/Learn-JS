@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>nested object</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		// mengambil semua data dari object
+		const Biografi = {
+				firstName: "Dzaki",
+				lastName: "Iswandanu",
+				address: {
+					street: "Citraland",
+					city: "Berlin",
+					country: "Germany"
+				},
+				hobby: "Listen Music",
+				Age: 54
+			}
+
+			const {firstName, lastName, address:{street, city, country}, ...others} = Biografi;
+			console.info(firstName);
+			console.info(lastName);
+			console.info(street);
+			console.info(city);
+			console.info(country);
+			console.info(others);
+
+	</script>
+</body>
+</html>

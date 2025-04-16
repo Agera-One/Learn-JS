@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Struktur Data Set</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		// Membuat set
+		const number = new Set([1, 2, 3]);
+		console.log(number);
+
+		// Menyimpan nilai menggunakan keyword add
+		const food = new Set();
+		food.add(1);
+		food.add('spagetti');
+		food.add(2);
+		food.add('lasagna');
+		console.log(food);
+
+		// Mengakses nilai menggunakan for (looping)
+		const dozens = new Set();
+		dozens.add(10);
+		dozens.add(20);
+		dozens.add(30);
+		for (const number of dozens) {
+			console.log(number);
+		}
+
+		// Mengakses nilai menggunakan foreach
+		const hundreds = new Set();
+		hundreds.add(100);
+		hundreds.add(200);
+		hundreds.add(300);
+		hundreds.forEach((number) => console.log(number));
+
+		// menghapus nilai
+		const thousands = new Set();
+		thousands.add(1000);
+		thousands.add(2000);
+		thousands.add(3000);
+		thousands.delete(3000);
+		console.log(thousands)
+
+	</script>
+</body>
+</html>

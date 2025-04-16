@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>operator instanceof inheritance</title>
+</head>
+<body>
+	<script type="text/javascript">
+		class Employee {
+
+		}
+
+		class Manager extends Employee {
+
+		}
+
+		const rizqi = new Employee();
+		const dewa = new Manager();
+
+		console.info(rizqi instanceof Employee);
+		console.info(rizqi instanceof Manager);
+		
+		// apakah rizqi instanceof dari employee atau turunan dari employee
+		console.info(dewa instanceof Employee);
+		console.info(dewa instanceof Manager);
+	</script>
+</body>
+</html>
